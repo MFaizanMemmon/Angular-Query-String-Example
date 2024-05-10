@@ -1,0 +1,11 @@
+
+constructor(private route: ActivatedRoute) {
+
+}
+
+receivedData : number = 0;
+
+ this.route.queryParams.subscribe(params => {
+      this.receivedData = params['data'];
+      console.log('Received data:', this.receivedData);
+)}
