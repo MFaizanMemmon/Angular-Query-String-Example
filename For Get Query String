@@ -1,0 +1,7 @@
+(input)="handleChange($event)"
+
+constructor(private router: Router) {}  
+  handleChange(event: any) {
+    const newValue = event.target.value;
+    this.router.navigate(['/'], { queryParams: { data: newValue } });
+  }
